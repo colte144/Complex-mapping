@@ -1,0 +1,35 @@
+#importing the required module
+import matplotlib.pyplot as plt
+import math
+
+#Defining varibles
+i = pow(-1,1/2)
+x = []
+y = []
+n = 1
+
+#defines the function you want analyze with complex numbers
+while True:
+    if n == 1:
+        O = float(1)
+        O = 4*i-3
+    G = (pow(O, 1/2)).real
+    H = (pow(O, 1/2)).imag
+    x.append(G)
+    y.append(H)
+    O = pow(O, 1/2)
+    n = n+1
+    if n > 10000:
+        break
+# plotting the points 
+plt.plot(x, y)
+
+# naming axis
+plt.xlabel('Real number - axis')
+plt.ylabel('Imaginary - axis')
+  
+# giving a title to my graph
+plt.title('I did it')
+  
+# function to show the plot
+plt.show()
